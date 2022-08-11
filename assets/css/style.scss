@@ -560,7 +560,10 @@
             width: 50%;
             height: 50%;
             object-fit: contain;
-            filter: var(--primary-filter);
+
+            &.filter {
+              filter: var(--primary-filter) !important;
+            }
           }
 
           &:hover {
@@ -572,7 +575,10 @@
 
             img {
               animation: fadeInLeft .4s linear;
-              filter: var(--light-filer);
+
+              &.filter {
+                filter: var(--light-filer);
+              }
             }
           }
         }
@@ -650,6 +656,10 @@
           }
         }
       }
+    }
+
+    .mobile-lang {
+      display: none;
     }
   }
 }

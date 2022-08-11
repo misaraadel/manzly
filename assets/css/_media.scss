@@ -4,6 +4,10 @@
       display: block !important;
     }
 
+    .mobile-hidden {
+      display: none !important;
+    }
+
     .navbar-nav {
       width: 100%;
       height: calc(100vh - 65px);
@@ -95,7 +99,7 @@
       top: 0 !important;
       left: 0px !important;
       z-index: 9999 !important;
-      opacity: unset !important;
+      opacity: 0;
       transform: translate(0px) !important;
       visibility: hidden;
       display: flex !important;
@@ -111,6 +115,7 @@
         top: 0;
         left: 0;
         z-index: 99;
+        visibility: hidden;
         opacity: 0;
       }
 
@@ -137,24 +142,24 @@
       }
 
       &.active-list {
+        opacity: 1 !important;
         visibility: visible !important;
 
         .overlay {
-          opacity: 1;
+          opacity: 1 !important;
+          visibility: visible !important;
         }
 
         .lang-list {
-          transform: translateY(0px);
-          opacity: 1;
-          visibility: visible;
+          transform: translateY(0px) !important;
+          opacity: 1 !important;
+          visibility: visible !important;
         }
       }
     }
 
-    .list-data:hover .list-contain {
-      opacity: unset !important;
-      visibility: unset !important;
-      transform: translateY(0px);
+    .mobile-lang {
+      display: block !important;
     }
   }
 

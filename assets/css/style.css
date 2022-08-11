@@ -1517,7 +1517,9 @@ ul {
   height: 50%;
   -o-object-fit: contain;
      object-fit: contain;
-  filter: var(--primary-filter);
+}
+.navbar .content .links-contain .icon .icon-contain img.filter {
+  filter: var(--primary-filter) !important;
 }
 .navbar .content .links-contain .icon .icon-contain:hover {
   border-color: transparent;
@@ -1528,6 +1530,8 @@ ul {
 .navbar .content .links-contain .icon .icon-contain:hover img {
   -webkit-animation: fadeInLeft 0.4s linear;
           animation: fadeInLeft 0.4s linear;
+}
+.navbar .content .links-contain .icon .icon-contain:hover img.filter {
   filter: var(--light-filer);
 }
 .navbar .content .links-contain .icon .list-contain {
@@ -1593,6 +1597,9 @@ ul {
 }
 .navbar .content .links-contain .icon .list-contain .lang-list li a:hover::After, .navbar .content .links-contain .icon .list-contain .lang-list li a.active::After {
   transform: scale(1);
+}
+.navbar .content .mobile-lang {
+  display: none;
 }
 
 header {
@@ -1940,6 +1947,9 @@ footer .copyrights p {
   .navbar .hamburger {
     display: block !important;
   }
+  .navbar .mobile-hidden {
+    display: none !important;
+  }
   .navbar .navbar-nav {
     width: 100%;
     height: calc(100vh - 65px);
@@ -2023,7 +2033,7 @@ footer .copyrights p {
     top: 0 !important;
     left: 0px !important;
     z-index: 9999 !important;
-    opacity: unset !important;
+    opacity: 0;
     transform: translate(0px) !important;
     visibility: hidden;
     display: flex !important;
@@ -2039,6 +2049,7 @@ footer .copyrights p {
     top: 0;
     left: 0;
     z-index: 99;
+    visibility: hidden;
     opacity: 0;
   }
   .navbar .list-contain .lang-list {
@@ -2061,20 +2072,20 @@ footer .copyrights p {
     justify-content: flex-start !important;
   }
   .navbar .list-contain.active-list {
+    opacity: 1 !important;
     visibility: visible !important;
   }
   .navbar .list-contain.active-list .overlay {
-    opacity: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   .navbar .list-contain.active-list .lang-list {
-    transform: translateY(0px);
-    opacity: 1;
-    visibility: visible;
+    transform: translateY(0px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
-  .navbar .list-data:hover .list-contain {
-    opacity: unset !important;
-    visibility: unset !important;
-    transform: translateY(0px);
+  .navbar .mobile-lang {
+    display: block !important;
   }
   .container.owl-nav {
     top: unset !important;
