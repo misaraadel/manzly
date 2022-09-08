@@ -1030,6 +1030,11 @@ ul {
   --primary-filter: invert(55%) sepia(50%) saturate(7157%) hue-rotate(209deg) brightness(98%) contrast(90%);
 }
 
+button {
+  outline: none !important;
+  border: 0px;
+}
+
 .custom-btn {
   width: 170px;
   height: 45px;
@@ -1557,7 +1562,7 @@ ul {
           animation: fadeInLeft 0.4s linear;
 }
 .navbar .content .links-contain .icon .icon-contain:hover img.filter {
-  filter: var(--light-filer);
+  filter: var(--light-filer) !important;
 }
 .navbar .content .links-contain .icon .list-contain {
   position: absolute;
@@ -2781,7 +2786,7 @@ header .image-content img {
   font-size: 15px;
   font-weight: 500;
   color: var(--gray-color) !important;
-  margin: 10px 0px;
+  margin: 0px;
 }
 .login .custom-btn {
   width: 100% !important;
@@ -2907,7 +2912,7 @@ header .image-content img {
 .login .form-contain input,
 .login .form-contain select, .login .form-data input,
 .login .form-data select {
-  height: 50px !important;
+  height: 50px;
 }
 .login .form-contain .form-floating > label, .login .form-data .form-floating > label {
   color: var(--gray-color);
@@ -3091,6 +3096,32 @@ header .image-content img {
 .features .box:hover img {
   -webkit-animation: tada 0.3s linear both;
           animation: tada 0.3s linear both;
+}
+
+.form-check {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  align-content: center;
+}
+.form-check .form-check-input {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+.form-check label {
+  margin: 0px;
+}
+.form-check label a {
+  color: var(--primary-color);
+}
+
+.form-code {
+  text-align: center !important;
+  border-radius: 10px !important;
 }
 
 footer {

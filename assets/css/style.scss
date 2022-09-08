@@ -14,6 +14,11 @@
   --primary-filter: invert(55%) sepia(50%) saturate(7157%) hue-rotate(209deg) brightness(98%) contrast(90%);
 }
 
+button {
+  outline: none !important;
+  border: 0px;
+}
+
 .custom-btn {
   width: 170px;
   height: 45px;
@@ -602,7 +607,7 @@
               animation: fadeInLeft .4s linear;
 
               &.filter {
-                filter: var(--light-filer);
+                filter: var(--light-filer) !important;
               }
             }
           }
@@ -1979,7 +1984,7 @@ header {
     font-size: 15px;
     font-weight: 500;
     color: var(--gray-color) !important;
-    margin: 10px 0px;
+    margin: 0px;
   }
 
   .custom-btn {
@@ -2105,7 +2110,7 @@ header {
   
     input , 
     select{
-      height: 50px !important;
+      height: 50px;
     }
     .form-floating > label {
       color: var(--gray-color);
@@ -2297,6 +2302,31 @@ header {
       }
     }
   }
+}
+
+.form-check {
+  width: fit-content !important;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  align-content: center;
+
+  .form-check-input {
+    height: fit-content !important;
+  }
+
+  label {
+    margin: 0px;
+
+    a {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.form-code {
+  text-align: center !important;
+  border-radius: 10px !important;
 }
 
 footer{
